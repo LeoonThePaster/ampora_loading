@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>by Slavik</title>
+<script async src="https://www.youtube.com/iframe_api"></script>
+<style id="applicationStylesheet" type="text/css">
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+body::-webkit-scrollbar {
+  display: none;
+}
+body {
+	background-color: black;
+	user-select: none;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+* {
+	font-family: Poppins;
+}
+	.mediaViewInfo {
+		--web-view-name: Canvas;
+		--web-view-id: Canvas;
+		--web-scale-to-fit: true;
+		--web-scale-to-fit-type: width;
+		--web-enable-scale-up: true;
+		--web-scale-on-resize: true;
+		--web-center-vertically: true;
+		--web-enable-deep-linking: true;
+	}
+	:root {
+		--web-view-ids: Canvas;
+	}
+	* {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+		border: none;
+	}
+	#Canvas {
+		position: absolute;
+		width: 1920px;
+		height: 1080px;
+		background-color: rgba(0,0,0,0);
+		overflow: hidden;
+		--web-view-name: Canvas;
+		--web-view-id: Canvas;
+		--web-scale-to-fit: true;
+		--web-scale-to-fit-type: width;
+		--web-enable-scale-up: true;
+		--web-scale-on-resize: true;
+		--web-center-vertically: true;
+		--web-enable-deep-linking: true;
+	}
+	#loadingscreen {
+		position: absolute;
+		width: 1943px;
+		height: 1175px;
+		left: -16px;
+		top: 0px;
+		overflow: visible;
+	}
+	#bg {
+		position: absolute;
+		width: 1920px;
+		height: 1180px;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+	#Gruppe_8 {
+		position: absolute;
+		width: 1125px;
+		height: 84px;
+		left: 414px;
+		top: 810px;
+		overflow: visible;
+	}
+	#Gruppe_2 {
+		position: absolute;
+		width: 361px;
+		height: 84px;
+		left: 0px;
+		top: -340px;
+		overflow: visible;
+	}
+	#bloodline_10 {
+		opacity: 0.251;
+		fill: rgba(0,0,0,1);
+	}
+	.bloodline_10 {
+		position: absolute;
+		overflow: visible;
+		width: 361px;
+		height: 84px;
+		left: 0px;
+		top: 0px;
+	}
+	#bloodline_2 {
+		opacity: 0.278;
+		fill: rgba(19,19,19,1);
+	}
+	.bloodline_2 {
+		position: absolute;
+		overflow: visible;
+		width: 50px;
+		height: 50px;
+		left: 36px;
+		top: 17px;
+	}
+	.layout_1 {
+		position: absolute;
+		width: 26px;
+		height: 26px;
+		left: 48px;
+		top: 29px;
+		overflow: visible;
+	}
+	#ucp {
+		left: 158.717px;
+		top: 34.349px;
+		position: absolute;
+		overflow: visible;
+		width: 169px;
+		white-space: nowrap;
+		line-height: 20.833330154418945px;
+		margin-top: -1.0416650772094727px;
+		text-align: center;
+		font-family: Metropolis-Bold;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 18.75px;
+		color: rgba(255,255,255,1);
+	}
+	#FORUM {
+		left: 107.873px;
+		top: 38.769px;
+		position: absolute;
+		overflow: visible;
+		width: 39px;
+		white-space: nowrap;
+		line-height: 14.00391960144043px;
+		margin-top: -1.7936248779296875px;
+		text-align: center;
+		font-style: normal;
+		font-weight: Bold;
+		font-size: 10.416669845581055px;
+		color: #ff1515;
+	}
+	#Gruppe_2_p {
+		position: absolute;
+		width: 361px;
+		height: 84px;
+		left: 382px;
+		top: -340px;
+		overflow: visible;
+	}
+	#bloodline_10_q {
+		opacity: 0.251;
+		fill: rgba(0,0,0,1);
+	}
+	.bloodline_10_q {
+		position: absolute;
+		overflow: visible;
+		width: 361px;
+		height: 84px;
+		left: 0px;
+		top: 0px;
+	}
+	#bloodline_2_r {
+		opacity: 0.278;
+		fill: rgba(19,19,19,1);
+	}
+	.bloodline_2_r {
+		position: absolute;
+		overflow: visible;
+		width: 50px;
+		height: 50px;
+		left: 36px;
+		top: 17px;
+	}
+	#layout_1_s {
+		position: absolute;
+		width: 26px;
+		height: 26px;
+		left: 48px;
+		top: 29px;
+		overflow: visible;
+	}
+	#DISCORDGGbloodline {
+		left: 162.717px;
+		top: 36.349px;
+		position: absolute;
+		overflow: visible;
+		width: 163px;
+		white-space: nowrap;
+		line-height: 20.833330154418945px;
+		margin-top: -2.0833301544189453px;
+		text-align: center;
+		font-family: Metropolis-Bold;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 16.666669845581055px;
+		color: rgba(255,255,255,1);
+	}
+	#DISCORD {
+		left: 98.873px;
+		top: 38.769px;
+		position: absolute;
+		overflow: visible;
+		width: 49px;
+		white-space: nowrap;
+		line-height: 14.00391960144043px;
+		margin-top: -1.7936248779296875px;
+		text-align: center;
+		font-style: normal;
+		font-weight: Bold;
+		font-size: 10.416669845581055px;
+		color: #ff1515;
+	}
+	#Gruppe_2_v {
+		position: absolute;
+		width: 361px;
+		height: 84px;
+		left: 764px;
+		top: -340px;
+		overflow: visible;
+	}
+	#bloodline_10_w {
+		opacity: 0.251;
+		fill: rgba(0,0,0,1);
+	}
+	.bloodline_10_w {
+		position: absolute;
+		overflow: visible;
+		width: 361px;
+		height: 84px;
+		left: 0px;
+		top: 0px;
+	}
+	#bloodline_2_x {
+		opacity: 0.278;
+		fill: rgba(19,19,19,1);
+	}
+	.bloodline_2_x {
+		position: absolute;
+		overflow: visible;
+		width: 50px;
+		height: 50px;
+		left: 36px;
+		top: 17px;
+	}
+	#layout_1_y {
+		position: absolute;
+		width: 26px;
+		height: 26px;
+		left: 48px;
+		top: 29px;
+		overflow: visible;
+	}
+	#bloodlineRP {
+		left: 190.717px;
+		top: 34.349px;
+		position: absolute;
+		overflow: visible;
+		width: 81px;
+		white-space: nowrap;
+		line-height: 20.833330154418945px;
+		margin-top: -1.0416650772094727px;
+		text-align: center;
+		font-family: Metropolis-Bold;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 18.75px;
+		color: rgba(255,255,255,1);
+	}
+	#TEAMSPEAK {
+		left: 99.873px;
+		top: 38.769px;
+		position: absolute;
+		overflow: visible;
+		width: 65px;
+		white-space: nowrap;
+		line-height: 14.00391960144043px;
+		margin-top: -1.7936248779296875px;
+		text-align: center;
+		font-style: normal;
+		font-weight: Bold;
+		font-size: 10.416669845581055px;
+		color: #ff1515;
+	}
+	#Gruppe_7 {
+		position: absolute;
+		width: 614px;
+		height: 207px;
+		left: 669px;
+		top: 437px;
+		overflow: visible;
+	}
+	#Gruppe_6 {
+		position: absolute;
+		width: 614px;
+		height: 207px;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+	#bloodline_10_ {
+		opacity: 0.502;
+		fill: rgba(0,0,0,1);
+	}
+	.bloodline_10_ {
+		position: absolute;
+		overflow: visible;
+		width: 614px;
+		height: 207px;
+		left: 0px;
+		top: 0px;
+	}
+	#Gruppe_5 {
+		position: absolute;
+		width: 87.5px;
+		height: 87.5px;
+		left: 78.75px;
+		top: 58.9px;
+		overflow: visible;
+	}
+	#Ellipse_1 {
+		position: absolute;
+		width: 87.5px;
+		height: 87.5px;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+	#Ellipse_1_ {
+		fill: rgba(0,0,0,0);
+		stroke: rgba(19,19,19,1);
+		stroke-width: 8.333333015441895px;
+		stroke-linejoin: round;
+		stroke-linecap: round;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Ellipse_1_ {
+		position: absolute;
+		overflow: visible;
+		width: 87.5px;
+		height: 87.5px;
+		left: 0px;
+		top: 0px;
+	}
+	#Clip {
+		position: absolute;
+		width: 87.5px;
+		height: 87.5px;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+	#bloodline_11 {
+		fill: rgba(19,19,19,1);
+	}
+	.bloodline_11 {
+		position: absolute;
+		overflow: visible;
+		width: 4px;
+		height: 151px;
+		left: 252px;
+		top: 28px;
+	}
+	#LADEVORGANG_LUFT {
+		left: 327.954px;
+		top: 95.882px;
+		position: absolute;
+		overflow: visible;
+		width: 209px;
+		white-space: nowrap;
+		line-height: 66.6666488647461px;
+		margin-top: -24.99998950958252px;
+		text-align: center;
+		font-family: Metropolis-Bold;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 16.666669845581055px;
+		color: rgba(255,255,255,1);
+	}
+	#logo {
+		-webkit-filter: drop-shadow(5px 5px 5px rgb(0, 0, 0, 0.549));
+		filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.549));
+		position: relative;
+		opacity: 1;
+
+		overflow: visible;
+	}
+#bgVideo{
+    width: 100%;
+    height:100vh; 
+}
+
+.circles{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.circles li{
+    position: absolute;
+    display: block;
+    list-style: none;
+    width: 20px;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    animation: animate 25s linear infinite;
+    bottom: -150px;
+    
+}
+
+.circles li:nth-child(1){
+    left: 25%;
+    width: 80px;
+    height: 80px;
+    animation-delay: 0s;
+}
+
+
+.circles li:nth-child(2){
+    left: 10%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 2s;
+    animation-duration: 12s;
+}
+
+.circles li:nth-child(3){
+    left: 70%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 4s;
+}
+
+.circles li:nth-child(4){
+    left: 40%;
+    width: 60px;
+    height: 60px;
+    animation-delay: 0s;
+    animation-duration: 18s;
+}
+
+.circles li:nth-child(5){
+    left: 65%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 0s;
+}
+
+.circles li:nth-child(6){
+    left: 75%;
+    width: 110px;
+    height: 110px;
+    animation-delay: 3s;
+}
+
+.circles li:nth-child(7){
+    left: 35%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 7s;
+}
+
+.circles li:nth-child(8){
+    left: 50%;
+    width: 25px;
+    height: 25px;
+    animation-delay: 15s;
+    animation-duration: 45s;
+}
+
+.circles li:nth-child(9){
+    left: 20%;
+    width: 15px;
+    height: 15px;
+    animation-delay: 2s;
+    animation-duration: 35s;
+}
+
+.circles li:nth-child(10){
+    left: 85%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 0s;
+    animation-duration: 11s;
+}
+
+
+
+@keyframes animate {
+
+    0%{
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+        border-radius: 0;
+    }
+
+    100%{
+        transform: translateY(-1000px) rotate(720deg);
+        opacity: 0;
+        border-radius: 50%;
+    }
+
+}
+.loader {
+  position: absolute;
+  top: calc(50% - 45px);
+  left: calc(50% - 220px);
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  perspective: 800px;
+  z-index: 5000;
+}
+
+.inner {
+  position: absolute;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;  
+}
+
+.inner.one {
+  left: 0%;
+  top: 0%;
+  animation: rotate-one 1s linear infinite;
+  border-bottom: 3px solid #EFEFFA;
+}
+
+.inner.two {
+  right: 0%;
+  top: 0%;
+  animation: rotate-two 1s linear infinite;
+  border-right: 3px solid #EFEFFA;
+}
+
+.inner.three {
+  right: 0%;
+  bottom: 0%;
+  animation: rotate-three 1s linear infinite;
+  border-top: 3px solid #EFEFFA;
+}
+
+@keyframes rotate-one {
+  0% {
+    transform: rotateX(35deg) rotateY(-45deg) rotateZ(0deg);
+  }
+  100% {
+    transform: rotateX(35deg) rotateY(-45deg) rotateZ(360deg);
+  }
+}
+
+@keyframes rotate-two {
+  0% {
+    transform: rotateX(50deg) rotateY(10deg) rotateZ(0deg);
+  }
+  100% {
+    transform: rotateX(50deg) rotateY(10deg) rotateZ(360deg);
+  }
+}
+
+@keyframes rotate-three {
+  0% {
+    transform: rotateX(35deg) rotateY(55deg) rotateZ(0deg);
+  }
+  100% {
+    transform: rotateX(35deg) rotateY(55deg) rotateZ(360deg);
+  }
+}
+.logo {
+    grid-area: 1 / 1 / 2 / 2;
+    background: rgb(5, 5, 5);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    animation: preload-logo-close 2s 1.5s forwards;
+    animation-timing-function: cubic-bezier(0.77, 0, 0.175, 1);
+    z-index: 5000;
+}
+	#bg {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+
+
+.logo .logo-img {
+    height: auto;
+    height: auto;
+    opacity: 1;
+    animation: open-opacity 1s 1.5s, preload-logo-close-color 7s;
+}
+
+@keyframes preload-logo-close {
+    0% {
+    	opacity: 1;
+    }
+
+
+    100% {
+		opacity: 0;
+    }
+}
+
+
+@keyframes preload-logo-close-color {
+    0% {
+        opacity: 0;
+        height: 150px;
+        width: 150px;
+    }
+
+    20% {
+        opacity: 1;
+        height: 150px;
+        width: 150px;
+    }
+
+    30% {
+        opacity: 1;
+        height: 300px;
+        width: 300px;
+    }
+
+    40% {
+        opacity: 1;
+        height: 250px;
+        width: 250px;
+    }
+
+    60% {
+        opacity: 0;
+        height: 500px;
+        width: 500px;
+    }
+
+    80% {
+        opacity: 1;
+        height: 500px;
+        width: 500px;
+    }
+}
+
+@keyframes begone-sucker {
+    0% {
+        opacity: 1;
+    }
+
+    99% {
+        opacity: 0;
+    }
+
+    100% {
+        display: none;
+        visibility: hidden;
+    }
+}
+
+
+@-webkit-keyframes slide-in-top {
+  0% {
+    -webkit-transform: translateY(-1000px);
+            transform: translateY(-1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-in-top {
+  0% {
+    -webkit-transform: translateY(-1000px);
+            transform: translateY(-1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+</style>
+<script id="applicationScript" type="text/javascript" src="rescale.js"></script>
+</head>
+<body>
+
+<div id="Canvas">
+	<video id="bg" controls preload="true" autoplay loop muted>
+		<source src="bg.mp4" type="video/mp4" > 
+	 </video>
+  <div id="Canvas">
+		  <audio id='muzica' volume='0.3' autoplay loop>
+  
+							  <source src="Music.mp3" type="audio/mpeg">
+							  Error
+  
+							</audio>
+							<script>
+								  var audio = document.getElementById("muzica");
+								  audio.volume = 0.2;
+  
+  
+								  function toggleAudio() {
+									  if(audio.paused) {
+										  audio.play();
+									  } else {
+										  audio.pause();
+									  }
+								  }
+  
+								  document.addEventListener('keypress', function (evt) {
+									  if(evt.keyCode == 32) {
+										  toggleAudio();
+									  }
+								  });
+								</script>
+
+<div class="container">
+            <div class="logo">
+                <img class="logo-img" src="https://cdn.discordapp.com/attachments/949836937206837258/956650781531074630/Logo_Transparent.png">
+            </div>
+        </div>
+<div id="Canvas">
+	<div id="loadingscreen">
+
+				</div>
+			</div>
+		</div>
+			
+	</div>
+</div>
+
+</body>
+<script src="script.js"></script>
+</html>
